@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .card {
+            margin: auto;
+            margin-top: 30px;
+            width: 200px;
+            height: 300px;
+            /* background-color: aqua; */
+            border-radius: 10px;
+            /* border: 1px solid gray; */
+        }
+
+        h2 {
+            /* font-size: 20px; */
+            text-align: center;
+            margin-top: 5px;
+            margin-bottom: 7px;
+        }
+
+        .bilde {
+            position: relative;
+            left: 25px;
+            margin-bottom: 5px;
+            width: 150px;
+            height: 100px;
+            border-radius: 4px;
+            /* background-color: red; */
+        }
+
+        .innercard {
+            margin: auto;
+            width: 190px;
+            height: 140px;
+            border-radius: 5px;
+            /* background-color: gray; */
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <button onclick="Simen()">Simen</button>
+    <button onclick="fredrikCard()">Fredrik</button>
+    <button onclick="jokkeCard()">Jokke</button>
+    <button onclick="chrisCard()">Chris</button>
+    <div class="card" id="mainCard">
+
+    </div>
+
+    <script>
+        function Simen() {
+            pickStyle('Hotpink');
+            // document.getElementById('mainCard').style.backgroundColor = "Hotpink";
+            document.getElementById('mainCard').innerHTML = /*HTML*/ `
+            <h2>Simen</h2>
+            
+            <img class="bilde" src="https://giffiles.alphacoders.com/212/212762.gif" alt="raahund"></div>
+            <div class="innercard">
+                <h3> 
+                <li>Verdens Kjekkeste </li>
+                <li>Verdens Sprekeste </li>
+                <li>Verdens Råeste </li>
+                <li>Verdens Beste </li>
+                
+            
+                </h3>
+                </div>
+            `;
+
+        }
+
+        function fredrikCard() {
+            pickStyle('#F7ECE1');
+            document.getElementById('mainCard').innerHTML = `
+            <h2>Fredrik</h2>
+
+            <img class="bilde" src="https://steinkjerhallen.no/wp-content/uploads/2016/05/img_0290.jpg" alt="klatrebilde">
+            <div class="innercard">
+                <table>
+            <tr>
+                <th>Klatre plass</th>
+                <th>Rank</th>
+            </tr>
+            <tr>
+                <td>Høyt under taket/</br>Tønsberg</td>
+                <td>****</td>
+            </tr>
+            <tr>
+                <th>Klatre styrke</th>
+                <th>rank</th>
+            </tr>
+            <tr>
+                <td>Ikke til stedet</td>
+                <td>*</td>
+            </tr>
+
+                </div>
+            `;
+
+        }
+
+        function jokkeCard() {
+            pickStyle('#d8b9ff');
+            // document.getElementById('mainCard').style.backgroundColor = "#d8b9ff";
+            document.getElementById('mainCard').innerHTML = /*html*/ `
+            <h2>Jokke</h2>
+
+            <img class="bilde" src="https://www.pictureframesexpress.co.uk/blog/wp-content/uploads/2020/05/7-Tips-to-Finding-Art-Inspiration-Header-1024x649.jpg" alt="le art"></div>
+            <div class="innercard">
+                <p>
+                <li> Nerd for kunst </li>
+                </p>
+                <p>  
+                <li> Halv-svensk </li>
+                </p>
+            </div>
+            `;
+        }
+
+        function chrisCard() {
+            pickStyle('#66CDAA');
+            document.getElementById('mainCard').innerHTML = /*html*/ `
+            <h2>Chris</h2>
+
+            <img class="bilde" src="https://i.imgflip.com/4725wu.png" alt="gaemr">
+            <div class="innercard">
+                <p>
+                <li>Kaster bort tid på data</li>
+                </p>
+                <p>
+                <li>Liker å stå på longboard</li>
+                </p>
+                <p>
+                <li>Har en irriterende katt</li>
+                </p>
+            </div>
+            `;
+        }
+
+        function pickStyle(color){
+            document.getElementById('mainCard').style.backgroundColor=`${color}`;
+            document.getElementById('mainCard').style.border='1px solid gray';
+
+        }
+    </script>
+
+</body>
+
+</html>
