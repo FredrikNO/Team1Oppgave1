@@ -29,6 +29,11 @@
             margin-top: 5px;
             margin-bottom: 7px;
         }
+        .fotografi {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+        }
 
         .bilde {
             position: relative;
@@ -54,14 +59,41 @@
 
 <body>
     <button onclick="Simen()">Simen</button>
-    <button onclick="fredrikCard()">Fredrik</button>
-    <button onclick="jokkeCard()">Jokke</button>
+    <button onclick="firstFredrikCard()">Fredrik</button>
+    <button onclick="firstJokkeCard()">Jokke</button>
     <button onclick="chrisCard()">Chris</button>
     <div class="card" id="mainCard">
 
     </div>
 
     <script>
+
+        function firstFredrikCard(){
+            pickStyle('#F7ECE1');
+            document.getElementById("mainCard").innerHTML=`
+            <img class="fotografi" src="https://scontent.fsvg2-1.fna.fbcdn.net/v/t1.18169-9/11703083_10152906309710163_1490578796326523801_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=Ix9kZrKldZQAX_BxYjw&_nc_ht=scontent.fsvg2-1.fna&oh=00_AT_0po2RIUMuHRc7LCG3XXtltSrzyha8u83p_5vQUkxMEg&oe=6323110D" alt="bilde" onClick="fredrikCard()">`;
+        }
+
+        function firstSimen(){
+            pickStyle('Hotpink');
+            document.getElementById("mainCard").innerHTML= /*HTML*/ `
+            <img class"fotografi" src="" alt="bilde" onClick="Simen()">`;
+            
+        }
+
+        function firstJokkeCard(){
+            pickstyle('#d8b9ff');
+            document.getElementById('mainCard').innerHTML = /*html*/ ` 
+            <img class="fotografi" src="https://imgur.com/a/KOq65cl" alt="bilde" onclick="jokkeCard()">
+            `;
+            
+        }
+
+        function firstchrisCard(){
+            pickStyle('#66CDAA');
+            document.getElementById('mainCard').innerHTML = ``
+        }
+
         function Simen() {
             pickStyle('Hotpink');
             // document.getElementById('mainCard').style.backgroundColor = "Hotpink";
@@ -88,7 +120,7 @@
             document.getElementById('mainCard').innerHTML = `
             <h2>Fredrik</h2>
 
-            <img class="bilde" src="https://steinkjerhallen.no/wp-content/uploads/2016/05/img_0290.jpg" alt="klatrebilde">
+            <img class="bilde" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/299287059_434587875376650_8448581747175337447_n.jpg?stp=dst-jpg_s206x206&_nc_cat=101&ccb=1-7&_nc_sid=aee45a&_nc_ohc=piyj3W-A_eQAX8rnOHH&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVIWcSZLZq_SYv0gRcMpXGslzeI5VFiuC8-NXEjx4orV8A&oe=63240D1B" alt="klatrebilde">
             <div class="innercard">
                 <table>
             <tr>
@@ -96,12 +128,20 @@
                 <th>Rank</th>
             </tr>
             <tr>
-                <td>Høyt under taket/</br>Tønsberg</td>
+                <td>Eftang</td>
+                <td>*****</td>
+            </tr>
+            <tr>
+                <th>Klatre utstyr</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>Sko, mat, kalk og buldrematte</td>
                 <td>****</td>
             </tr>
             <tr>
                 <th>Klatre styrke</th>
-                <th>rank</th>
+                <th></th>
             </tr>
             <tr>
                 <td>Ikke til stedet</td>
@@ -115,7 +155,6 @@
 
         function jokkeCard() {
             pickStyle('#d8b9ff');
-            // document.getElementById('mainCard').style.backgroundColor = "#d8b9ff";
             document.getElementById('mainCard').innerHTML = /*html*/ `
             <h2>Jokke</h2>
 
