@@ -33,6 +33,9 @@
             height: 150px;
             width: 150px;
             border-radius: 50%;
+            margin: 75px auto;
+            display: block;
+            /* margin-top: 75px; */
         }
 
         .bilde {
@@ -58,10 +61,10 @@
 </head>
 
 <body>
-    <button onclick="Simen()">Simen</button>
+    <button onclick="firstSimen()">Simen</button>
     <button onclick="firstFredrikCard()">Fredrik</button>
     <button onclick="firstJokkeCard()">Jokke</button>
-    <button onclick="chrisCard()">Chris</button>
+    <button onclick="firstchrisCard()">Chris</button>
     <div class="card" id="mainCard">
 
     </div>
@@ -77,22 +80,22 @@
         function firstSimen(){
             pickStyle('Hotpink');
             document.getElementById("mainCard").innerHTML= /*HTML*/ `
-            <img class"fotografi" src="" alt="bilde" onClick="Simen()">`;
+            <img class="fotografi" src="SimenErBest.png" alt="bilde" onClick="Simen()">`;
             
         }
 
         function firstJokkeCard(){
-            pickstyle('#d8b9ff');
-            document.getElementById('mainCard').innerHTML = /*html*/ ` 
-            <img class="fotografi" src="https://imgur.com/a/KOq65cl" alt="bilde" onclick="jokkeCard()">
+            pickStyle('#D8B9FF');
+            document.getElementById('mainCard').innerHTML = /*html*/` 
+            <img class="fotografi" src="https://i.imgur.com/tBWZP0v.jpeg" alt="bilde" onclick="jokkeCard()">
             `;
-            
         }
 
         function firstchrisCard(){
             pickStyle('#66CDAA');
-            document.getElementById('mainCard').innerHTML = ``
-        }
+            document.getElementById('mainCard').innerHTML = /*html*/ `
+            <img class="fotografi" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/298487356_467989005333955_864962294559884701_n.jpg?stp=dst-jpg_p206x206&_nc_cat=103&ccb=1-7&_nc_sid=aee45a&_nc_ohc=ofMT0j7s_EAAX87XFwK&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVIhvtnurYaJZTItwU5C8nF3GDcONJnjedCElbwO7FbsSg&oe=632420C5" alt="bilde" onclick="chrisCard()">`;
+        } 
 
         function Simen() {
             pickStyle('Hotpink');
