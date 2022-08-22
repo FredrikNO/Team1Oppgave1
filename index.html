@@ -14,8 +14,8 @@
         }
 
         .card {
-            margin: auto;
-            margin-top: 30px;
+            margin: 30px auto;
+            /* margin-top: 30px; */
             width: 200px;
             height: 300px;
             /* background-color: aqua; */
@@ -29,6 +29,7 @@
             margin-top: 5px;
             margin-bottom: 7px;
         }
+
         .fotografi {
             height: 150px;
             width: 150px;
@@ -56,51 +57,62 @@
             /* background-color: gray; */
 
         }
+
+        #buttons{
+            display:flex;
+            justify-content: center;
+        }
+
+        button {
+            margin: 5px 10px;
+        }
     </style>
 
 </head>
 
 <body>
-    <button onclick="firstSimen()">Simen</button>
-    <button onclick="firstFredrikCard()">Fredrik</button>
-    <button onclick="firstJokkeCard()">Jokke</button>
-    <button onclick="firstchrisCard()">Chris</button>
+    <div id="buttons">
+        <button onclick="firstSimen()">Simen</button>
+        <button onclick="firstFredrikCard()">Fredrik</button>
+        <button onclick="firstJokkeCard()">Jokke</button>
+        <button onclick="firstchrisCard()">Chris</button>
+    </div>
     <div class="card" id="mainCard">
-
     </div>
 
     <script>
+        const mainDiv = document.getElementById("mainCard");
 
-        function firstFredrikCard(){
+        function firstFredrikCard() {
             pickStyle('#F7ECE1');
-            document.getElementById("mainCard").innerHTML=`
+            mainDiv.innerHTML = `
             <img class="fotografi" src="https://scontent.fsvg2-1.fna.fbcdn.net/v/t1.18169-9/11703083_10152906309710163_1490578796326523801_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=Ix9kZrKldZQAX_BxYjw&_nc_ht=scontent.fsvg2-1.fna&oh=00_AT_0po2RIUMuHRc7LCG3XXtltSrzyha8u83p_5vQUkxMEg&oe=6323110D" alt="bilde" onClick="fredrikCard()">`;
         }
 
-        function firstSimen(){
+        function firstSimen() {
             pickStyle('Hotpink');
-            document.getElementById("mainCard").innerHTML= /*HTML*/ `
+            mainDiv.innerHTML = /*HTML*/ `
             <img class="fotografi" src="SimenErBest.png" alt="bilde" onClick="Simen()">`;
-            
+
         }
 
-        function firstJokkeCard(){
+        function firstJokkeCard() {
             pickStyle('#D8B9FF');
-            document.getElementById('mainCard').innerHTML = /*html*/` 
+            mainDiv.innerHTML = /*html*/` 
             <img class="fotografi" src="https://i.imgur.com/tBWZP0v.jpeg" alt="bilde" onclick="jokkeCard()">
             `;
         }
 
-        function firstchrisCard(){
+        function firstchrisCard() {
             pickStyle('#66CDAA');
-            document.getElementById('mainCard').innerHTML = /*html*/ `
+            mainDiv.innerHTML = /*html*/ `
             <img class="fotografi" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/298487356_467989005333955_864962294559884701_n.jpg?stp=dst-jpg_p206x206&_nc_cat=103&ccb=1-7&_nc_sid=aee45a&_nc_ohc=ofMT0j7s_EAAX87XFwK&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVIhvtnurYaJZTItwU5C8nF3GDcONJnjedCElbwO7FbsSg&oe=632420C5" alt="bilde" onclick="chrisCard()">`;
-        } 
+        }
 
         function Simen() {
             pickStyle('Hotpink');
             // document.getElementById('mainCard').style.backgroundColor = "Hotpink";
-            document.getElementById('mainCard').innerHTML = /*HTML*/ `
+            mainDiv.innerHTML = /*HTML*/ `
             <h2>Simen</h2>
             
             <img class="bilde" src="https://giffiles.alphacoders.com/212/212762.gif" alt="raahund"></div>
@@ -120,7 +132,7 @@
 
         function fredrikCard() {
             pickStyle('#F7ECE1');
-            document.getElementById('mainCard').innerHTML = `
+            mainDiv.innerHTML = `
             <h2>Fredrik</h2>
 
             <img class="bilde" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/299287059_434587875376650_8448581747175337447_n.jpg?stp=dst-jpg_s206x206&_nc_cat=101&ccb=1-7&_nc_sid=aee45a&_nc_ohc=piyj3W-A_eQAX8rnOHH&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVIWcSZLZq_SYv0gRcMpXGslzeI5VFiuC8-NXEjx4orV8A&oe=63240D1B" alt="klatrebilde">
@@ -158,7 +170,7 @@
 
         function jokkeCard() {
             pickStyle('#d8b9ff');
-            document.getElementById('mainCard').innerHTML = /*html*/ `
+            mainDiv.innerHTML = /*html*/ `
             <h2>Jokke</h2>
 
             <img class="bilde" src="https://www.pictureframesexpress.co.uk/blog/wp-content/uploads/2020/05/7-Tips-to-Finding-Art-Inspiration-Header-1024x649.jpg" alt="le art"></div>
@@ -175,7 +187,7 @@
 
         function chrisCard() {
             pickStyle('#66CDAA');
-            document.getElementById('mainCard').innerHTML = /*html*/ `
+            mainDiv.innerHTML = /*html*/ `
             <h2>Chris</h2>
 
             <img class="bilde" src="https://i.imgflip.com/4725wu.png" alt="gaemr">
@@ -193,9 +205,9 @@
             `;
         }
 
-        function pickStyle(color){
-            document.getElementById('mainCard').style.backgroundColor=`${color}`;
-            document.getElementById('mainCard').style.border='1px solid gray';
+        function pickStyle(color) {
+            mainDiv.style.backgroundColor = `${color}`;
+            mainDiv.style.border = '1px solid gray';
 
         }
     </script>
